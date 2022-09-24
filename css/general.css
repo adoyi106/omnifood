@@ -1,0 +1,262 @@
+/* 
+
+---01 TYPOGRAPHY SYSTEM
+
+
+-FONT SIZE (PX):
+10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+
+
+-font weight:
+Default:400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+-Line height:
+Default:1
+Small: 1.05
+Paragraph Default: 1.6
+medium:1.2
+
+
+
+----02 COLORS
+
+-primary color: #e67e22
+
+
+
+-Tints: 
+ #fdf2e9
+#fae5d3
+-Shades:
+-Accents:
+-Greys:
+
+#6f6f6f(lightest grey color allowed on #fdf2e9)
+#555
+#333
+
+--04 Letter-spacing
+-0.5px
+0.75px
+
+---05 SHADOWS
+
+---06 BORDER-RADIUS
+Default: 9px
+
+---07 WHITESPACES
+
+---SPACING SYSTEM: 
+2/4/8/12/16/24/32/48/64/80/96/120
+
+*/
+/* **********"" */
+/* GENERAL STYLES */
+/* ****************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    /* Does work for all browser and not nice */
+    /* scroll-behavior: smooth; */
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    overflow-x: hidden;
+}
+
+/* ****************** */
+/* REUSABLE STYLES */
+/* ****************** */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* because we want the height to be sticky */
+    padding: 0 4.8rem;
+    height: 9.8rem;
+    background-color:#fdf2e9 ;
+
+    /* For Mobile Navigation */
+    position: relative;
+}
+
+.logo{
+    height: 2.2rem;
+}
+
+/* Reusable grid and container */
+.container{
+    /* 1140px */
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+.grid{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+
+}
+
+.grid:not(:last-child){
+    margin-bottom: 9.6rem
+}
+.grid--2-col{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-col{
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-col{
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-col{
+    grid-template-columns: repeat(5, 1fr);
+}
+.grid--col-v{
+    align-items: center;
+}
+
+/* ****************** */
+/* REUSABLE STYLES */
+/* ****************** */
+/* ****************** */
+
+.heading-primary{
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+
+.heading-secondary,
+.heading-primary, .heading-tertiary {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.heading-secondary{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+.subheading{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:#cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link, .btn:visited{
+    display: inline-block;
+    font-size: 2rem;
+   
+    text-decoration: none;
+    border-radius: 9px;
+    padding: 1.6rem 3.2rem;
+    font-weight: 600;
+
+    /* Only necessary for .btn */
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+
+    /* Put transition on the original state */
+    transition: all 0.3s;
+}
+.btn-form:hover{
+    background-color: #fff;
+    color: #555;
+}
+
+.btn--full:link,.btn--full:visited {
+    background-color: #e67e22;
+    color: #fff;
+    /* margin-right: 1.6rem; */
+}
+
+.btn--full:hover,.btn--full:active{
+    background-color: #cf711f;
+    /* background-color: red; */
+}
+
+.btn--outline:link,.btn--outline:link:visited{
+    background-color: #fff;
+    color: #555;
+}
+
+.btn--outline:hover,.btn--outline:link:active{
+    background-color: #fdf2e9;
+
+    /* border: 3px solid #fff; */
+
+    /* Trick to add border inside of link button */
+    box-shadow: inset 0 0 0 3px #fff;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+.list-item{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+.list-icon{
+    height: 3rem;
+    width: 3rem;
+    color: #e67e22;
+}
+.link:link,
+.link:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s;
+}
+.link:hover,
+.link:active{
+    color: #cf711f;
+    border-bottom: 1px solid transparent;
+}
+/* Helper Classes*/
+strong{
+    font-weight: 500;
+}
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important ; 
+}
+.center-text {
+    text-align: center;
+}
+
