@@ -265,6 +265,24 @@ em = current font size */
 }
 
 
+@media (max-width: 34em){
+    .pricing-plan--starter{
+        padding: 1.6rem;
+    }
+   
+
+    .footer{
+        padding: 4.0rem;
+        
+    }
+    .section-pricing{
+        padding: 9.6rem 5.6rem 9.6rem 5.6rem;
+    }
+
+    
+}
+
+
 /* ****************** */
 /* For flexox safari systems */
 /* ****************** */
